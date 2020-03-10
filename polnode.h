@@ -3,6 +3,8 @@
 
 #include <uint256.h>
 
+/// polNode is the binary tree representation of a Utreexo Compact State Node
+/// Each polNode points to nieces, not children.
 class polNode
 {
 public:

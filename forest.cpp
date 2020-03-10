@@ -6,7 +6,10 @@
 
 void Forest::Add(const std::vector<LeafTXO> adds)
 {
-    // TODO
+    for (LeafTXO l : adds) {
+        Forest::positionMap
+    }
+
 }
 
 void Forest::Remove(const std::vector<uint64_t>& dels)
@@ -20,25 +23,25 @@ undoBlock Forest::Modify(const std::vector<LeafTXO>& adds, const std::vector<uin
     return {};
 }
 
-Proof Forest::Prove(const uint256& wanted) const
+BlockProof Forest::Prove(const uint256& wanted) const
 {
     // TODO
     return {};
 }
 
-std::vector<Proof> Forest::ProveMany(const std::vector<uint256>& wanted) const
+std::vector<BlockProof> Forest::ProveMany(const std::vector<uint256>& wanted) const
 {
     // TODO
     return {};
 }
 
-bool Forest::Verify(const Proof& p) const
+bool Forest::Verify(const BlockProof& p) const
 {
     // TODO
     return false;
 }
 
-bool Forest::VerifyMany(const std::vector<Proof>& p) const
+bool Forest::VerifyMany(const std::vector<BlockProof>& p) const
 {
     // TODO
     return false;
@@ -62,11 +65,6 @@ void Forest::Undo(const undoBlock& ub) const
 }
 
 void Forest::reMap(uint8_t destHeight)
-{
-    // TODO
-}
-
-void Forest::reHash(const std::vector<uint64_t>& dirt)
 {
     // TODO
 }
