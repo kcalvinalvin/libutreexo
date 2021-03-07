@@ -4,6 +4,7 @@
 #include <array>
 #include <utility>
 #include <vector>
+#include <stdint.h>
 
 namespace utreexo {
 using Hash = std::array<uint8_t, 32>;
@@ -18,8 +19,8 @@ public:
     Accumulator(uint64_t num_leaves);
     virtual ~Accumulator();
 
-    /** 
-     * Try to prove the provided targets. 
+    /**
+     * Try to prove the provided targets.
      * Return true on success and false on failure.
      */
     virtual bool Prove(BatchProof& proof, const std::vector<Hash>& target_hashes) const = 0;
